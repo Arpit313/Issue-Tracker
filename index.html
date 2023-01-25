@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+    
+</head>
+
+<body>
+    
+    <div class="topnav sticky">
+        <a href="#current-issues">Current Issue</a>
+        <a href="#form">New Issue</a>
+        <hr>
+      </div>
+
+    <div class="container" id="form">
+        <h1><u>ISSUE MANAGEMENT SYSTEM</u></h1>
+        <br>
+        <div class="new-issue-form" >
+            <h3>Add New Issue Here</h3>
+            <form id="issue-form" action="#current-issues">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Describe the issue" required>
+                <label for="severity">Severity</label>
+                <select name="severity" id="severity" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="assigned-to">Assigned To</label>
+                <input type="text" id="assigned-to" placeholder="Enter responsible person" required>
+                <button class="btn" id="btn-add" type="submit">Add</button>
+            </form>
+        </div>
+        <hr>
+        <h2 id="current-issues" ><u>CURRENT ISSUES</u></h2>
+        <hr>
+        <div class="issues-container">
+            <div class="issue-state" id="new-state" style="background-color: rgb(180, 245, 180);">
+                <div class="sticky-div"><h3>New</h3></div>
+            </div>
+            <div class="issue-state" id="development-state" style="background-color: rgb(247, 154, 247);">
+                <div class="sticky-div"><h3>In Development</h3></div>
+
+            </div>
+            <div class="issue-state" id="test-state" style="background-color: rgb(228, 131, 147);">
+                <div class="sticky-div"><h3>Testing</h3></div>
+            </div>
+            <div class="issue-state" id="done-state" style="background-color: rgb(240, 147, 71);">
+                <div class="sticky-div"><h3>Done</h3></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
